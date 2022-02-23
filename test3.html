@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .d1 {
+        background: LightSkyBlue;
+      }
+      .d2 {
+        background: LightSalmon;
+      }
+      .d3 {
+        background: PaleTurquoise;
+      }
+      .d4 {
+        background: LightPink;
+      }
+      .d5 {
+        background: PaleGreen;
+      }
+      .d6 {
+        background: rgb(86, 202, 86);
+      }
+      .container {
+        font-size: 40px;
+        width: 100%;
+        background: LightGray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 285px 100px 285px;
+        grid-gap: 30px;
+        grid-template-areas:
+          "h1 h1 h2 h3"
+          "h1 h1 h2 h3"
+          "h4 h5 h6 h6"
+          "h4 h5 h6 h6";
+      }
+      .item {
+        border-radius: 5px;
+      }
+      .item:first-child {
+        grid-area: h1;
+      }
+      .item:nth-child(2) {
+        grid-area: h2;
+      }
+      .item:nth-child(3) {
+        grid-area: h3;
+      }
+
+      .item:nth-child(4) {
+        grid-area: h4;
+      }
+      .item:nth-child(5) {
+        grid-area: h5;
+      }
+      .item:last-child {
+        grid-area: h6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="d1 item">1</div>
+      <div class="d2 item">2</div>
+      <div class="d3 item">3</div>
+      <div class="d4 item">4</div>
+      <div class="d5 item">5</div>
+      <div class="d6 item">6</div>
+    </div>
+  </body>
+</html>
